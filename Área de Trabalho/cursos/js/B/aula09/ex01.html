@@ -16,15 +16,24 @@
     <h1>Título teste</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo a nemo veniam, commodi adipisci, non sapiente, odio voluptates delectus dicta quisquam quaerat assumenda quos error perferendis explicabo dolorum quibusdam suscipit.</p>
     <p>Aqui tem um <strong>STRONG</strong></p>
-    <div>Clique aqui</div>
+    <div id="click">Clique aqui</div>
+    <div name="Nome">Essa div tem um nome "Nome"</div>
 
     <script>
+        var d = window.document.getElementById('click');
         var corpo = window.document.body;
         var p1 = window.document.getElementsByTagName('p')[1];
         p1.style.color = 'orange';
+        d.style.background = 'green';
+        d.innerText = "fico no aguardo"
+        // window.docuemnt.getElementById('click').innerText = "fico no aguardo" 
+        // /\ isso também funciona
         corpo.style.backgroundColor = 'black';
         document.write(p1.innerText + ', mas que não mantém o parâmetro strong<br>');
         document.write(p1.innerHTML + ', puxando a tag ');
+        var query = window.document.querySelector('div#click');
+        document.getElementsByName('Nome')[0].innerHTML = "<strong> agora essa div tem um texto em negrito</strong>"
+        query.style.backgroundColor = 'red';
     </script>
 </body>
 </html>
