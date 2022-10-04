@@ -20,9 +20,28 @@
 <body>
     <div id="area">
         Interaja
-
-
     </div>
+
+    <script>
+        var a = document.getElementById('area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+
+
+        function clicar(){
+            a.innerHTML = "<h2>Clicou</h2>";
+            a.style.background = "black";
+        }
+        function entrar(){
+            a.innerText = "Entrou na div";
+            a.style.background = "gray";
+        }
+        function sair(){
+            a.innerText = "Saiu da div";
+            a.style.background = "green";
+        }
+    </script>
     
 </body>
 </html>
