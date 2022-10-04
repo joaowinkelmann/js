@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check velocidade</title>
+</head>
+<body>
+    <h1>Check de velocidade</h1>
+    Velocidade do carro: <input type="number" name="vel" id="vel">
+    <input type="button" value="Consultar" onclick="check()">
+
+    <div id="resultado">
+        Resultado vai aqui
+    </div>
+    
+    <script>
+        var res = document.querySelector('div#resultado');
+        function check(){
+            var velocidade = document.querySelector('input#vel');
+            numvel = Number(velocidade.value);
+
+            res.innerHTML = `A sua velocidade atual é de ${numvel} Km/h`;
+            if (numvel > 120){    
+                res.innerHTML += "<h2> A velocidade foi acima do permitido</h2>";
+                //document.write("Velocidade acima");
+            }
+        }
+    </script>
+
+</body>
+</html>
