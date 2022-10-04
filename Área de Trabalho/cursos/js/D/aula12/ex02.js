@@ -1,10 +1,14 @@
-var hora = 5;
+var agora = new Date();
+var hora = agora.getHours;
+console.log(hora.value);
+
+var hora = 12;
 
 if (hora < 0){
     console.log("Hora inválida!!");
 }
 else{
-    if (hora > 2 && hora < 5){
+    if (hora >= 0 && hora < 5){
         console.log("Boa madrugada.");
     }
     else if (hora < 12){
