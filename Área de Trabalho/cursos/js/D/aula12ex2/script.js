@@ -17,13 +17,16 @@ function loader(){
     if(hora > 5 && hora < 12){
         salve.innerHTML = `Bom dia!`;
         img.src = "manha.jpg";
+        document.body.style.background = "#d97343";
     }
     else if (hora >= 12 && hora < 18){
         salve.innerHTML = `Boa tarde!`;
         img.src = "tarde.jpg";
+        document.body.style.background = "#d47d13";
     }
     else{
         salve.innerHTML = "Boa noite!";
         img.src = "noite.jpg";
+        document.body.style.background = "#413770";
     }
 }
