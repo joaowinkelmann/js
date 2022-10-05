@@ -33,12 +33,8 @@ img{
     margin: auto;
 }
 
-div#imagemdiv{
+div#msg, div#sorte, div#imagemdiv{
     display: flex;
-}
-
-div#msg, div#sorte{
-    display: flex;
-    margin: 10px;
-    padding: 5px;
+    margin: 3px;
+    padding: auto;
 }
