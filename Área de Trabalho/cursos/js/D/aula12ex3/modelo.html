@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo de exercício</title>
+    <title>Verificador de Idade</title>
 </head>
 <body>
     <header>
@@ -15,9 +15,20 @@
     <section>
 
         <div>
-            Insira a sua idade aqui: <input type="number" name="idade" id="idade">
+            <p>
+                Insira a sua idade aqui: <input type="number" name="ano" id="ano" min="0">
+            </p>
+            <p>Sexo: 
+                <input type="radio" name="radio" id="radiomasc" checked>
+                <label for="radiomasc">Masculino</label>
+                <input type="radio" name="radio" id="radiofem">
+                <label for="radiofem">Feminino</label>
+            </p>
+             
+            <input type="button" id="enviar" value="Enviar" name="enviar" onclick="verifica()">
         </div>
-        
+
+        <div id="txtresultado"></div>
         <div id="imgresultado"></div>
 
     </section>
