@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Modelo de exercício</title>
+    <title>Tabuada</title>
 </head>
 <body>
     <header>
-        <h2>Titulo</h2>
+        <h2>Tabuada</h2>
     </header>
 
     <section>
-
         <div>
-            Testando
+            <p>Insira um número para ser a base da tabuada: <input type="number" name="base" id="base"></p>
+            <input type="button" onclick="tabuada()" value="Ver tabuada">
         </div>
-        <div>
-            Olá
+        <div id="resultado">
+            <select name="tabuada" id="seltab"></select>
+            O resultado será aqui   
         </div>
 
     </section>
