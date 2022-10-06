@@ -19,8 +19,14 @@ function contar(){
     // for(i=0;i<10;i++){
     //     result.innerHTML += `${i}`;  
     // }
-
-    for(i = val_i; i <= val_m; i += val_s ){
-        result.innerHTML += `${i} `;
+    if(val_i < val_m){
+        for(i = val_i; i <= val_m; i += val_s ){
+            result.innerHTML += `${i} `;
+        }
+    }
+    else{
+        for(i = val_i; i >= val_m; i -= val_s ){
+            result.innerHTML += `${i} `;
+        }   
     }
 }                   
