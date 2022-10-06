@@ -19,6 +19,12 @@ function contar(){
     // for(i=0;i<10;i++){
     //     result.innerHTML += `${i}`;  
     // }
+
+    if(val_s <= 0){
+        window.alert("Passo inválido!");
+        result.innerHTML = null;
+    }
+
     if(val_i < val_m){
         for(i = val_i; i <= val_m; i += val_s ){
             result.innerHTML += `${i} `;
