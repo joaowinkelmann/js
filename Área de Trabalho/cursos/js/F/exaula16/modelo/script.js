@@ -21,6 +21,11 @@ function adicionar(){
     else{window.alert("Erro, o numero precisa estar entre 1 e 100");}
 }
 
-function analise(){
+// function analise(){
+//     // let linha = document.createElement('p');
+//     result.innerHTML = null;
+//     result.innerHTML = `<p> A soma dos elementos é igual a ${soma}`;
+//     result.innerHTML += `<p> A média dos elementos é igual a ${soma/select.length}
+    
 
-}
+// }
