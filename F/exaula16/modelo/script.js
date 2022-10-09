@@ -39,7 +39,19 @@ function analise(){
         result.innerHTML = null;
         result.innerHTML += `<p>O total de valores cadastrados é igual a ${vetnum.length}`;
         result.innerHTML += `<p> A soma dos elementos é igual a ${soma}`;
-        result.innerHTML += `<p> A média dos valores adicionados é igual a ${soma/(vetnum.length)}`
+        result.innerHTML += `<p> A média dos valores adicionados é igual a ${soma/(vetnum.length)}`;
+        let maior = vetnum[0];
+        let menor = vetnum[0];
+        for(let pos in vetnum){
+            if(vetnum[pos] > maior){
+                maior = vetnum[pos];
+            }
+            if(vetnum[pos] < menor){
+                menor = vetnum[pos];
+            }
+        }
+        result.innerHTML += `<p>O menor número é igual a ${menor}`;
+        result.innerHTML += `<p>O maior número é igual a ${maior}`;
         // result.innerHTML += `<p> A média dos elementos é igual a ${soma/select.length}
     }
 }
