@@ -2,30 +2,44 @@ var num = document.querySelector('input#num');
 var select = document.querySelector('select#selres');
 var result = document.querySelector('div#resultado');
 var i = 0;
-var soma;
+var soma = 0;
+var vetnum = [];
 
-function adicionar(){ 
-    for(item in select){
-        if(num.value == item){
-            return window.alert("Erro: O número já existe");
-        }
-    }
-    if(num.value >= 1 && num.value <= 100){
+function adicionar(){
+    if(num.value >= 1 && num.value <= 100 && !naLista(num.value, vetnum)){
+        vetnum.push(Number(num.value));
         let item = document.createElement('option');
         item.text = `O número é ${num.value}`;
         item.value = `select${i}`;
         select.appendChild(item);
-        soma += num.value;
+        result.innerHTML = null;
+        soma = soma + Number(num.value);
         i++;
     }
-    else{window.alert("Erro, o numero precisa estar entre 1 e 100");}
+    else{window.alert("Erro, o numero precisa estar entre 1 e 100 e não pode se repitir");}
+    num.value = null;
+    num.focus();
 }
 
-// function analise(){
-//     // let linha = document.createElement('p');
-//     result.innerHTML = null;
-//     result.innerHTML = `<p> A soma dos elementos é igual a ${soma}`;
-//     result.innerHTML += `<p> A média dos elementos é igual a ${soma/select.length}
-    
+function naLista(n, l){
+    if (l.indexOf(Number(n)) != -1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
-// }
+function analise(){
+    // let linha = document.createElement('p');
+    if (vetnum.length == 0){
+        window.alert("Insira valores a serem analisados");
+    }
+    else{
+        result.innerHTML = null;
+        result.innerHTML += `<p>O total de valores cadastrados é igual a ${vetnum.length}`;
+        result.innerHTML += `<p> A soma dos elementos é igual a ${soma}`;
+        result.innerHTML += `<p> A média dos valores adicionados é igual a ${soma/(vetnum.length)}`
+        // result.innerHTML += `<p> A média dos elementos é igual a ${soma/select.length}
+    }
+}
